@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./Vista/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="./Vista/css/estilochistes.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Chistes DS-I</title>
+</head>
+<body>
+    <nav class="teal darken-2">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo"><i class="material-icons">sentiment_very_satisfied</i>Chistes DS-I</a>
+            <ul id="nav-mobile" class="right">
+                <li>
+                    <a href="#" id="info-toggle">
+                        <i class="material-icons left">info</i> Total Chistes: <span id="total-salon-badge">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container contenedor-principal">
+        <div class="row center">
+            <div class="col s12">
+                <img src="./Vista/img/risa.png" alt="Chistes DS-I" class="img-portada">
+                <h3 class="teal-text text-darken-2">Portal de Chistes del Salón</h3>
+            </div>
+        </div>
+
+        <div id="store-container" class="row">
+
+            <!-- 1. Bastian Nefi Quipo Mamani -->
+            <div class="col s12"><h4 class="header-categoria">Bastian Nefi Quipo Mamani</h4></div>
+            <div class="col s12 m12 l4"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/zapatillas.jpg" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">¿Qué le dice un zapato a otro zapato?</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="0">Analizar</button></div></div></div>
+            <div class="col s12 m12 l4"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/minion.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">¿Dónde viven los minions?</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="1">Analizar</button></div></div></div>
+            <div class="col s12 m12 l4"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/frio.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">¿Qué hace un programador cuando hace mucho frío?</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="2">Analizar</button></div></div></div>
+
+            <!-- 2. Sullca Caballero Jean Pol -->
+            <div class="col s12"><h4 class="header-categoria">Sullca Caballero Jean Pol</h4></div>
+            <div class="col s12 m12 l6"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/perro.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">¿Qué hace un perro con un taladro?</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="3">Analizar</button></div></div></div>
+            <div class="col s12 m12 l6"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/pizza.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">¿La diferencia entre una pizza y un judío?</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="4">Analizar</button></div></div></div>
+
+            <!-- 3. Gianfranco Maximiliano Quispe Pinto -->
+            <div class="col s12"><h4 class="header-categoria">Gianfranco Maximiliano Quispe Pinto</h4></div>
+            <div class="col s12 m12 l3"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/pez.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">¿Qué le dice un pez a otro pez?</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="5">Analizar</button></div></div></div>
+            <div class="col s12 m12 l3"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/hospital.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">Hospital en chino:</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="6">Analizar</button></div></div></div>
+            <div class="col s12 m12 l3"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/dj.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">¿Por qué nunca debes de discutir con un DJ?</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="7">Analizar</button></div></div></div>
+            <div class="col s12 m12 l3"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/gallo.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">El colmo del gallo:</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="8">Analizar</button></div></div></div>
+
+            <!-- 4. Frank Puma Ucharo -->
+            <div class="col s12"><h4 class="header-categoria">Frank Puma Ucharo</h4></div>
+            <div class="col s12 m12 l4"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/dracula.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">¿Qué hace Drácula con un tractor?</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="9">Analizar</button></div></div></div>
+            <div class="col s12 m12 l4"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/tenedor.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">El colmo de un tenedor:</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="10">Analizar</button></div></div></div>
+            <div class="col s12 m12 l4"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/manzana.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">A un niño lo llamaban manzana, ¿por qué?</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="11">Analizar</button></div></div></div>
+
+            <!-- 5. Quispe Cusihuaman Sebastian Cristian -->
+            <div class="col s12"><h4 class="header-categoria">Quispe Cusihuaman Sebastian Cristian</h4></div>
+            <div class="col s12 m12 l4"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/cero.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">¿Qué le dice un cero a otro cero?</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="12">Analizar</button></div></div></div>
+            <div class="col s12 m12 l4"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/bicicleta.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">Diferencia entre negro y bicicleta:</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="13">Analizar</button></div></div></div>
+            <div class="col s12 m12 l4"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/abuelo.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">Mi abuelo falleció durmiendo como él quería:</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="14">Analizar</button></div></div></div>
+
+            <!-- 6. Pereyra Rumaja Armando -->
+            <div class="col s12"><h4 class="header-categoria">Pereyra Rumaja Armando</h4></div>
+            <div class="col s12 m12 l4"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/cura.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">¿En qué se parece un cura a un árbol de navidad?</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="15">Analizar</button></div></div></div>
+            <div class="col s12 m12 l4"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/ninio.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">¿Dónde está Juanito tras pisar una mina?</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="16">Analizar</button></div></div></div>
+            <div class="col s12 m12 l4"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/crucero.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">¿Por qué no se ven tantas personas negras en un crucero?</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="17">Analizar</button></div></div></div>
+
+            <!-- 7. Araoz Tapia Sebastis Joaquin -->
+            <div class="col s12"><h4 class="header-categoria">Araoz Tapia Sebastian Joaquin</h4></div>
+            <div class="col s12 m12 l3"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/ciega.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">Una niña ciega ve una película y no pudo verla, ¿por qué?</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="18">Analizar</button></div></div></div>
+            <div class="col s12 m12 l3"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/huerfano.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">¿Qué hace un huérfano en navidad?</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="19">Analizar</button></div></div></div>
+            <div class="col s12 m12 l3"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/negros.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">15 africanos contra una pared blanca:</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="20">Analizar</button></div></div></div>
+            <div class="col s12 m12 l3"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/triste.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">¿Qué hace saltar a una persona triste?</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="21">Analizar</button></div></div></div>
+
+            <!-- 8. Edmundo Yabar Yepez -->
+            <div class="col s12"><h4 class="header-categoria">Edmundo Yabar Yepez</h4></div>
+            <div class="col s12 m12 l6"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/chino.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">Prostituta en chino:</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="22">Analizar</button></div></div></div>
+            <div class="col s12 m12 l6"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/sonrisa.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">¿Cuál es la mayor cantidad de desaparecidos en África?</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="23">Analizar</button></div></div></div>
+
+            <!-- 9. Chino Hilares Shanne Alison -->
+            <div class="col s12"><h4 class="header-categoria">Chino Hilares Shanne Alison</h4></div>
+            <div class="col s12 m12 l12"><div class="card card-panel item-card"><div class="card-image"><img src="./Vista/img/tornado.png" alt="Chiste" class="img-chiste"></div><div class="card-content"><span class="card-title descripcion">¿Qué hace un tornado en África?</span></div><div class="card-action"><button class="add btn waves-effect waves-light teal darken-2" data-id="24">Analizar</button></div></div></div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./Vista/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./Vista/js/materialize.min.js"></script>
+    <script type="text/javascript" src="./Vista/js/chistes.js"></script>
+</body>
+</html>
