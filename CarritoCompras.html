@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./Vista/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="./Vista/css/estilocompras.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Carrito de Compra</title>
+</head>
+<body>
+    <nav class="yellow darken-2">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo black-text">Mi Tienda Online</a>
+            <ul id="nav-mobile" class="right">
+                <li>
+                    <a href="#" id="cart-toggle" class="black-text">
+                        <i class="material-icons left">shopping_cart</i> Carrito
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="app" class="container" style="margin-top: 20px;">
+        <div id="shopping-cart-container" class="hide z-depth-3">
+            <div class="cart-header" style="display: flex; justify-content: space-between; align-items: center;">
+                <strong>Mi Carrito</strong>
+                <button id="bClose" class="red white-text">X</button>
+            </div>
+            <div id="cart-items-list"></div>
+            <div class="total" id="cart-total">Total: $0.00</div>
+            <div class="cart-actions" id="cart-actions-container"></div>
+        </div>
+
+        <div id="store-container" class="row">
+
+            <!-- Categoría: Calzado -->
+            <div class="col s12">
+                <h4 class="header-categoria">Calzado</h4>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card card-panel item-card">
+                    <div class="card-image">
+                        <img src="./Vista/img/zapatillas.jpg" alt="Zapatillas" style="height: 150px; object-fit: cover;">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title descripcion" style="font-size: 1.1rem; font-weight: bold;">Zapatillas</span>
+                        <div class="precio">$250.00</div>
+                        <div class="cantidad grey-text" data-product-id="0">5 unidades</div>
+                    </div>
+                    <div class="card-action">
+                        <button class="add btn waves-effect waves-light yellow darken-2 black-text" data-id="0" style="width: 100%;">Añadir</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l3">
+                <div class="card card-panel item-card">
+                    <div class="card-image">
+                        <img src="./Vista/img/medias.jpg" alt="Medias Deportivas" style="height: 250px; object-fit: cover;">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title descripcion" style="font-size: 1.1rem; font-weight: bold;">Medias Deportivas</span>
+                        <div class="precio">$15.00</div>
+                        <div class="cantidad grey-text" data-product-id="7">100 unidades</div>
+                    </div>
+                    <div class="card-action">
+                        <button class="add btn waves-effect waves-light yellow darken-2 black-text" data-id="7" style="width: 100%;">Añadir</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoría: Deportes -->
+            <div class="col s12">
+                <h4 class="header-categoria">Deportes</h4>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card card-panel item-card">
+                    <div class="card-image">
+                        <img src="./Vista/img/pelotas.jpg" alt="Pelotas" style="height: 250px; object-fit: cover;">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title descripcion" style="font-size: 1.1rem; font-weight: bold;">Pelotas</span>
+                        <div class="precio">$345.00</div>
+                        <div class="cantidad grey-text" data-product-id="1">50 unidades</div>
+                    </div>
+                    <div class="card-action">
+                        <button class="add btn waves-effect waves-light yellow darken-2 black-text" data-id="1" style="width: 100%;">Añadir</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l3">
+                <div class="card card-panel item-card">
+                    <div class="card-image">
+                        <img src="./Vista/img/short.jpg" alt="Short Deportivo" style="height: 250px; object-fit: cover;">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title descripcion" style="font-size: 1.1rem; font-weight: bold;">Short Deportivo</span>
+                        <div class="precio">$60.00</div>
+                        <div class="cantidad grey-text" data-product-id="6">25 unidades</div>
+                    </div>
+                    <div class="card-action">
+                        <button class="add btn waves-effect waves-light yellow darken-2 black-text" data-id="6" style="width: 100%;">Añadir</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l3">
+                <div class="card card-panel item-card">
+                    <div class="card-image">
+                        <img src="./Vista/img/reloj.jpg" alt="Reloj Deportivo" style="height: 250px; object-fit: cover;">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title descripcion" style="font-size: 1.1rem; font-weight: bold;">Reloj Deportivo</span>
+                        <div class="precio">$450.00</div>
+                        <div class="cantidad grey-text" data-product-id="8">15 unidades</div>
+                    </div>
+                    <div class="card-action">
+                        <button class="add btn waves-effect waves-light yellow darken-2 black-text" data-id="8" style="width: 100%;">Añadir</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoría: Ropa -->
+            <div class="col s12">
+                <h4 class="header-categoria">Ropa</h4>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card card-panel item-card">
+                    <div class="card-image">
+                        <img src="./Vista/img/buzos.jpg" alt="Buzos Hue" style="height: 250px; object-fit: cover;">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title descripcion" style="font-size: 1.1rem; font-weight: bold;">Buzos Hue</span>
+                        <div class="precio">$1,300.00</div>
+                        <div class="cantidad grey-text" data-product-id="2">80 unidades</div>
+                    </div>
+                    <div class="card-action">
+                        <button class="add btn waves-effect waves-light yellow darken-2 black-text" data-id="2" style="width: 100%;">Añadir</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l3">
+                <div class="card card-panel item-card">
+                    <div class="card-image">
+                        <img src="./Vista/img/camisetas.jpg" alt="Camisetas" style="height: 250px; object-fit: cover;">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title descripcion" style="font-size: 1.1rem; font-weight: bold;">Camisetas</span>
+                        <div class="precio">$90.00</div>
+                        <div class="cantidad grey-text" data-product-id="5">40 unidades</div>
+                    </div>
+                    <div class="card-action">
+                        <button class="add btn waves-effect waves-light yellow darken-2 black-text" data-id="5" style="width: 100%;">Añadir</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoría: Accesorios -->
+            <div class="col s12">
+                <h4 class="header-categoria">Accesorios</h4>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card card-panel item-card">
+                    <div class="card-image">
+                        <img src="./Vista/img/gorras.jpg" alt="Gorras" style="height: 250px; object-fit: cover;">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title descripcion" style="font-size: 1.1rem; font-weight: bold;">Gorras</span>
+                        <div class="precio">$50.00</div>
+                        <div class="cantidad grey-text" data-product-id="3">30 unidades</div>
+                    </div>
+                    <div class="card-action">
+                        <button class="add btn waves-effect waves-light yellow darken-2 black-text" data-id="3" style="width: 100%;">Añadir</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l3">
+                <div class="card card-panel item-card">
+                    <div class="card-image">
+                        <img src="./Vista/img/mochilas.jpg" alt="Mochilas" style="height: 350px; object-fit: cover;">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title descripcion" style="font-size: 1.1rem; font-weight: bold;">Mochilas</span>
+                        <div class="precio">$120.00</div>
+                        <div class="cantidad grey-text" data-product-id="4">20 unidades</div>
+                    </div>
+                    <div class="card-action">
+                        <button class="add btn waves-effect waves-light yellow darken-2 black-text" data-id="4" style="width: 100%;">Añadir</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./Vista/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./Vista/js/materialize.min.js"></script>
+    <script type="text/javascript" src="./Vista/js/compras.js"></script>
+</body>
+</html>
